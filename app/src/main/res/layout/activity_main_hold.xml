@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainHoldActivity"
+    android:background="@drawable/bg480">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8fe1e0c4">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:layout_width="@dimen/icon"
+                android:layout_height="@dimen/icon"
+                android:onClick="clickInformation"
+                android:id="@+id/imageView2"
+                android:layout_weight="1"
+                android:src="@drawable/note" />
+
+            <ImageView
+                android:layout_width="@dimen/icon"
+                android:layout_height="@dimen/icon"
+                android:onClick="clickRepair"
+                android:id="@+id/imageView3"
+                android:layout_weight="1"
+                android:src="@drawable/fix" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cardata"
+                android:id="@+id/textView12"
+                android:layout_weight="1"
+                android:textColor="@color/text2"
+                android:textSize="18dp"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fix"
+                android:id="@+id/textView13"
+                android:layout_weight="1"
+                android:textColor="@color/text2"
+                android:textSize="18dp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:layout_width="@dimen/icon"
+                android:layout_height="@dimen/icon"
+                android:onClick="clickGPS"
+                android:id="@+id/imageView4"
+                android:layout_weight="1"
+                android:src="@drawable/gps" />
+
+            <ImageView
+                android:layout_width="@dimen/icon"
+                android:layout_height="@dimen/icon"
+                android:onClick="clickCenterService"
+                android:id="@+id/imageView5"
+                android:layout_weight="1"
+                android:src="@drawable/tel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/gps"
+                android:id="@+id/textView14"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text2"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tel"
+                android:id="@+id/textView15"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@color/text2"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

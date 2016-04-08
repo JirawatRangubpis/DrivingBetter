@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Driving Better</string>
+    <string name="car_id">ทะเบียนรถ</string>
+    <string name="password">Password</string>
+    <string name="mile_car">ไมล์ปัจจุบัน</string>
+    <string name="act">พ.ร.บ.</string>
+    <string name="tag">ภาษี</string>
+    <string name="insure">ประกันภัย</string>
+    <string name="batt">แบตเตอรี</string>
+    <string name="tire">ยาง</string>
+    <string name="engine_oil">น้ำมันเครื่อง</string>
+
+    <string name="head1">กรอกข้อมูลรถยนต์</string>
+    <string name="save">Save Data</string>
+    <string name="cardata">ข้อมูลรถยนต์</string>
+    <string name="fix">แนะนำการซ่อมบำรุง</string>
+    <string name="gps">GPS</string>
+    <string name="tel">ข้อมูลศูนย์บริการ</string>
+
+
+    <string name="hint_id_car">กข-1234</string>
+    <string name="hint_password">อย่างน้อย7ตัว</string>
+    <string name="hint_mile">ระยะทางสะสมทั้งหมด</string>
+    <string name="hint_act">วันที่ต่อ พรบ. ล่าสุด</string>
+    <string name="hint_tax">วันที่ต่อภาษีล่าสุด</string>
+    <string name="hint_insure">วันที่ต่อประกันภัยรถยนต์ล่าสุด</string>
+    <string name="hint_batt">วันที่เปลี่ยนแบตฯล่าสุด</string>
+    <string name="hint_tire">วันที่เติมลมยางล่าสุด</string>
+
+    <string name="title1">ศูนย์บริการ</string>
+    <string name="title2">ประกันภัย</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>
