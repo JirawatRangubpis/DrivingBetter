@@ -149,44 +149,29 @@ public class SingUpActivity extends AppCompatActivity {
 
         try {
 
-//            ArrayList<NameValuePair> objNameValuePairs = new ArrayList<NameValuePair>();
-//            objNameValuePairs.add(new BasicNameValuePair("isAdd", "true"));
-//            objNameValuePairs.add(new BasicNameValuePair("Id_Car", idCarString));
-//            objNameValuePairs.add(new BasicNameValuePair("Password", passwordString));
-//            objNameValuePairs.add(new BasicNameValuePair("MileCar", MileCarString));
-//            objNameValuePairs.add(new BasicNameValuePair("Date", dateString));
-//            objNameValuePairs.add(new BasicNameValuePair("Mile", MileString));
-//            objNameValuePairs.add(new BasicNameValuePair("ACT", actString));
-//            objNameValuePairs.add(new BasicNameValuePair("TAX", taxString));
-//            objNameValuePairs.add(new BasicNameValuePair("Insure", insureString));
-//            objNameValuePairs.add(new BasicNameValuePair("Batt", battString));
-//            objNameValuePairs.add(new BasicNameValuePair("Tire", tireString));
-//            objNameValuePairs.add(new BasicNameValuePair("Engine_oil", engineOilString));
-//            objNameValuePairs.add(new BasicNameValuePair("Radiator", radiatorString));
-//            objNameValuePairs.add(new BasicNameValuePair("Fullservice", fullserviceString));
-//
-//            HttpClient objHttpClient = new DefaultHttpClient();
-//            //HttpPost objHttpPost = new HttpPost("http://swiftcodingthai.com/car/php_add_data_master.php");
-//            HttpPost objHttpPost = new HttpPost("http://swiftcodingthai.com/car/php_add_data_gps.php");
-//            objHttpPost.setEntity(new UrlEncodedFormEntity(objNameValuePairs, "UTF-8"));
-//            objHttpClient.execute(objHttpPost);
-
             ArrayList<NameValuePair> objNameValuePairs = new ArrayList<NameValuePair>();
             objNameValuePairs.add(new BasicNameValuePair("isAdd", "true"));
-            objNameValuePairs.add(new BasicNameValuePair("Officer", "masterTest123"));
-            objNameValuePairs.add(new BasicNameValuePair("Desk", "masterTest"));
-            objNameValuePairs.add(new BasicNameValuePair("Food", "masterTest"));
-            objNameValuePairs.add(new BasicNameValuePair("Item", "masterTest"));
+            objNameValuePairs.add(new BasicNameValuePair("Id_Car", idCarString + "/" + provinceString));
+            objNameValuePairs.add(new BasicNameValuePair("Password", passwordString));
+            objNameValuePairs.add(new BasicNameValuePair("MileCar", MileCarString));
+            objNameValuePairs.add(new BasicNameValuePair("Date", dateString));
+            objNameValuePairs.add(new BasicNameValuePair("Mile", MileString));
+            objNameValuePairs.add(new BasicNameValuePair("ACT", actString));
+            objNameValuePairs.add(new BasicNameValuePair("TAX", taxString));
+            objNameValuePairs.add(new BasicNameValuePair("Insure", insureString));
+            objNameValuePairs.add(new BasicNameValuePair("Batt", battString));
+            objNameValuePairs.add(new BasicNameValuePair("Tire", tireString));
+            objNameValuePairs.add(new BasicNameValuePair("Engine_oil", engineOilString));
+            objNameValuePairs.add(new BasicNameValuePair("Radiator", radiatorString));
+            objNameValuePairs.add(new BasicNameValuePair("Fullservice", fullserviceString));
 
             HttpClient objHttpClient = new DefaultHttpClient();
-            HttpPost objHttpPost = new HttpPost("http://swiftcodingthai.com/12dec/php_add_data.php");
+            HttpPost objHttpPost = new HttpPost("http://swiftcodingthai.com/car/php_add_user_master.php");
             objHttpPost.setEntity(new UrlEncodedFormEntity(objNameValuePairs, "UTF-8"));
             objHttpClient.execute(objHttpPost);
 
-
-
-
             Toast.makeText(SingUpActivity.this, "Update New Value Successful", Toast.LENGTH_SHORT).show();
+            finish();
         } catch (Exception e) {
             Toast.makeText(SingUpActivity.this, "ไม่สามารถ เชื่อมต่อ Server ได้", Toast.LENGTH_SHORT).show();
         }

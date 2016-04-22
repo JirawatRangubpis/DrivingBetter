@@ -56,16 +56,58 @@ public class MainHoldActivity extends AppCompatActivity {
         // Setup Start
         latDoubles = new double[2];
         lngDoubles = new double[2];
+
+        // จุดเริ่มต้นของการวัดระยะ(ตย:บ้านมาสเตอร์)
         latDoubles[0] = 13.6770983;
         lngDoubles[0] = 100.6159983;
 
+//        FindFirstLocation findFirstLocation = new FindFirstLocation();
+//        findFirstLocation.execute();
 
-        // Calculate Distance
-        //calculateDistance();
 
         calculateDistanceLast();
 
     }   // Main Method
+
+    public class FindFirstLocation extends AsyncTask<Void, Void, String> {
+
+        @Override
+        protected String doInBackground(Void... voids) {
+
+            try {
+
+                OkHttpClient okHttpClient = new OkHttpClient();
+                Request.Builder builder = new Request.Builder();
+                Request request = builder.url("http://swiftcodingthai.com/car/php_get_first.php").build();
+                Response response = okHttpClient.newCall(request).execute();
+                return response.body().string();
+
+            } catch (Exception e) {
+                return null;
+            }
+
+        } // doInBack
+
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+
+            try {
+
+                JSONArray jsonArray = new JSONArray(s);
+                JSONObject jsonObject = jsonArray.getJSONObject(0);
+
+                latDoubles[0] = Double.parseDouble(jsonObject.getString("Lat"));
+                lngDoubles[0] = Double.parseDouble(jsonObject.getString("Lng"));
+
+                Log.d("9April", "lat, lng Star ที่ได้ " + latDoubles[0] + "/" + lngDoubles);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        } // onPost
+    } // FindFirstLocation
 
     public class MyConnected extends AsyncTask<Void, Void, String> {
 
@@ -118,14 +160,24 @@ public class MainHoldActivity extends AppCompatActivity {
         mySumADouble = mySumADouble + distance;
         Log.d("8April", "mySum ==>" + mySumADouble);
 
-        if (mySumADouble > 2000) {
+        if (mySumADouble > 10000) {
 
             myNotification();
             Toast.makeText(this, "เกินแล้วนะ", Toast.LENGTH_SHORT).show();
 
+        } else if (checkTimes()) {
+            myNotification();
         }
 
     } // mySum
+
+    private boolean checkTimes() {
+
+
+
+        return false;
+    }
+
 
     private void myNotification() {
 
