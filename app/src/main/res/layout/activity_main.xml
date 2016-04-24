@@ -8,12 +8,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="appewtc.masterung.drivingbetter.MainActivity"
-    android:background="@drawable/bg480">
+    android:background="@drawable/bg4">
 
     <ImageView
         android:layout_width="@dimen/logo"
         android:layout_height="@dimen/logo"
         android:id="@+id/imageView"
-        android:layout_centerInParent="true"
-        android:src="@drawable/dvlogo" />
+        android:src="@drawable/logohome"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="322dp" />
 </RelativeLayout>

@@ -6,13 +6,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainHoldActivity"
-    android:background="@drawable/bg480">
+    android:background="@drawable/bg4">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#8fe1e0c4">
+        android:background="#58eeeff3">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -26,7 +26,7 @@
                 android:onClick="clickInformation"
                 android:id="@+id/imageView2"
                 android:layout_weight="1"
-                android:src="@drawable/note" />
+                android:src="@drawable/noteseiei" />
 
             <ImageView
                 android:layout_width="@dimen/icon"
@@ -34,7 +34,7 @@
                 android:onClick="clickRepair"
                 android:id="@+id/imageView3"
                 android:layout_weight="1"
-                android:src="@drawable/fix" />
+                android:src="@drawable/fixeiei" />
         </LinearLayout>
 
         <LinearLayout
@@ -76,7 +76,7 @@
                 android:onClick="clickGPS"
                 android:id="@+id/imageView4"
                 android:layout_weight="1"
-                android:src="@drawable/gps" />
+                android:src="@drawable/gpseiei" />
 
             <ImageView
                 android:layout_width="@dimen/icon"
@@ -84,7 +84,7 @@
                 android:onClick="clickCenterService"
                 android:id="@+id/imageView5"
                 android:layout_weight="1"
-                android:src="@drawable/tel" />
+                android:src="@drawable/teleiei" />
         </LinearLayout>
 
         <LinearLayout

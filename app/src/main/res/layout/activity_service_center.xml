@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="appewtc.masterung.drivingbetter.ServiceCenterActivity"
-    android:background="@drawable/bg480">
+    android:background="@drawable/bg4">
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,5 +30,5 @@
         android:layout_below="@+id/textView43"
         android:layout_above="@+id/button7"
         android:layout_margin="15dp"
-        android:background="#96ffffff" />
+        android:background="#58eeeff3" />
 </RelativeLayout>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="appewtc.masterung.drivingbetter.DetailRepairActivity"
-    android:background="@drawable/bg480">
+    android:background="@drawable/bg4">
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +29,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/imageView7"
         android:layout_marginTop="20dp"
-        android:background="#96ffffff"
+        android:background="#58eeeff3"
         android:padding="10dp">
 
         <TextView
